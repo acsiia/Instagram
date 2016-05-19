@@ -1,0 +1,269 @@
+.bg-common {
+    background: #b9b9b9 url(../../resources/photo/melon.jpg) no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+.welcome-bg {
+    background: #b9b9b9 url(../../resources/photo/background.jpg) no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+.welcome-btn {
+    width: 200px;
+    background: gray;
+    border: gray;
+}
+
+#welcome-cont {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 300px;
+    background: lavender;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+
+.user-post-br {
+    clear: both;
+}
+
+.user-post-position {
+    left: 21.5% !important;
+}
+
+.user-btn-size {
+    width: 20%;
+    height: 10%;
+}
+
+.user-layer {
+    overflow: auto;
+    overflow-clip: 100%;
+    border: 3px hidden #ffffff;
+    border-radius: 10px;
+}
+
+.user-label-fixed {
+    /*position: fixed;*/
+    color: #ffffff;
+    /*top: 8%;*/
+    /*left: 4%;*/
+}
+
+.user-btn-fixed {
+    position: fixed;
+    background: gray;
+    border: gray;
+
+}
+
+.user-add-btn-position {
+    top: 15%;
+    left: 4%;
+}
+
+.user-profile-btn-position {
+    top: 28%;
+    left: 4%;
+}
+
+
+.profile-user-return-btn-position {
+    top: 12%;
+    left: 4%;
+}
+
+.profile-edit-btn-position {
+    top: 25%;
+    left: 4%;
+}
+
+.user-post-scroll {
+    overflow: hidden;
+    text-after-overflow: ellipse;
+    height: 12%;
+}
+
+.my-col-sm-10 {
+    width: 300px !important;
+    left: 47px !important;
+}
+
+.my-btn-size {
+    width: 170px !important;
+}
+
+.login-exc-col {
+    color: red;
+}
+
+#login-main-label {
+    color: gray;
+}
+
+.frame-container {
+    position: absolute;
+    top: 40%;
+    left: 54%;
+    width: 400px;
+    background: lavender;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.signup-main-label {
+    color: gray;
+}
+
+.signup-label {
+    text-align: left;
+    color: gray;
+}
+
+.bg-nav {
+    background: #929292;
+    border: 2px solid lavender;
+}
+
+.nav-comp {
+    color: #ffffff;
+}
+
+.btn-bg {
+    background: gray;
+    border: gray;
+}
+
+.table-stl {
+    color: #000000;
+}
+
+.table-search-stl {
+    color: #000000;
+    border: #000000;
+}
+.tr-stl {
+    color: gray;
+}
+
+.pre-post {
+    background-color: #ffffff;
+    border: #ffffff;
+    text-align: justify;
+}
+
+.post-popup {
+    width: 40%;
+    height: auto;
+    border: 2px solid #66afe9;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+
+.post-del {
+    float:right;
+    color: gray;
+}
+
+.close{
+    margin-left: 364px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.post-popup-img {
+    border-radius: 10px;
+    border: #ffffff;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.comment-footer {
+    bottom: 0;
+}
+
+.comment-textarea {
+    width: 60%;
+}
+
+.comment-btn {
+    background: gray;
+    border: gray;
+    height: 95px;
+}
+
+.time-post {
+    float: right;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.profile-popup-link-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: blue;
+}
+
+.profile-img {
+    cursor: pointer;
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.profile-default-img {
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.profile-layer {
+    overflow-x: auto;
+    overflow-clip: 100%;
+}
+
+.profile-edit-btn {
+    position: fixed;
+    cursor: pointer;
+    top: 12%;
+    left: 4%;
+}
+
+.profile-header-text {
+    color: #000000;
+}
+
+.profile-text {
+    color: #ffffff;
+}
+
+.profile-popup-avatar {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.search-dropdown {
+    position: fixed;
+    top: 6%;
+    left: 4%;
+    z-index: 1;
+}
+
+.search-icon {
+    border: 2px solid #000000;
+    cursor: pointer;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.search-container {
+    position: relative;
+    top: 10%;
+    width: 800px;
+    background: lavender;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="
+      http://www.springframework.org/schema/security
+      http://www.springframework.org/schema/security/spring-security.xsd
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<global-method-security secured-annotations="enabled" /> -->
+
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/users/**" access="hasRole('USER')"/>
+        <intercept-url pattern="/post/**" access="hasRole('USER')"/>
+        <intercept-url pattern="/profile/**" access="hasRole('USER')"/>
+        <intercept-url pattern="/allUserSearch/**" access="hasRole('USER')"/>
+        <intercept-url pattern="/admin/**" access="hasRole('ADMIN')"/>
+        <intercept-url pattern="/login" access="!isAuthenticated()"/>
+        <intercept-url pattern="/" access="!isAuthenticated()"/>
+        <intercept-url pattern="/registration" access="!isAuthenticated()"/>
+
+        <access-denied-handler error-page="/403page"/>
+        <form-login
+                always-use-default-target="false"
+                login-page="/login"
+                default-target-url="/users/user"
+                authentication-failure-url="/login?fail"
+                username-parameter="username"
+                password-parameter="password"/>
+        <logout logout-success-url="/login"/>
+
+        <remember-me remember-me-parameter="remember-me"  key="uniqueAndSecret" token-validity-seconds="1209600"/>
+    </http>
+
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="authorizationService">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>
+
+

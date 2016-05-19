@@ -1,0 +1,65 @@
+1. три точки **
+2. дефолтный путь к картинке аватара(не особо актуально, уже сделал по-другому)
+3. Иногда выскакивает ошибка: 
+	java.io.IOException: tmpFile.renameTo(classFile) failed (org.apache.jasper.JasperException: Unable to compile class for JSP)
+	при (при переходе на страницу добавление поста '/post?authorizedUser=51')
+4.datepicker не работает +
+5. Remember me не работает при регистрации * 
+6. HTML теги в комментах +
+7. пустой пост, коммент +
+
+9. UTC +
+10. org.apache.jasper.JasperException: Unable to compile class for JSP
+	org.apache.jasper.JspCompilationContext.compile
+java.io.IOException: tmpFile.renameTo(classFile) failed
+	at org.apache.jasper.compiler.SmapUtil$SDEInstaller.install(SmapUtil.java:205)	
+
+8. лайки !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+1)контекс в урлы +
+2)Европа/Минск - в константы или ресурсы 
+3)пустой профайл валидатор +
+4)датапикер? или его убрать или сделать какое пояснение о формате +
+5)для всех форм сделать <label> и placeholder на UI +
+6)есть проблема с юзабилити. пройдись по всем страницам и сделай читаемый текст. сам представь что ты юзер. что тебе удобно что нет (я еще напишу пару замечаний попозже)
+7)олег просил сделать справочник стран. создай енам на стран 20-30 и соответсвенно в коде. (как роль админа или лайк) +
+8)поиск: сделай поиск не только по логину, по имени и фамилии тоже. просто додаь OR в dao +
+9)на странице ошибки не работает переключение языка. надо бы еще посомтреть +
+10) http://localhost:8080/profile/user=8 несущ. юзер вылетает ошибка +
+11) Локализация для названия страниц +
+12) Записать логи в файл
+13) Read me
+14) http://localhost:8080/profile/user=2 если не цифры, а текст, то ошибка сервера (не надо исправлять)+
+15) email validation +
+
+
+валидация города
+
+
+
+
+
+1) перенеси выбор языка вправо +
+2) 
+3) погугли варианты "повторного пароля" +
+4) remember password по дефолту не выбрано +
+5) input data -> посмотри как другие чуваки называют такие формы +
+6) на форме sign up для кнопки sign in сделать лейбу already have an account? +
+7) на форме sign in для кнопки sign up сделать лейбу "don't have an account?" +
+8) logout при наведении курсора подчеркивать -
+9) убрать палец с дефолтной фотки +
+10) User page -> Activity Feed +
+11) Edit -> Edit My Profile +
+12) Name -> First Name +
+13) Surname -> Last Name +
+14) Second Name -> Middle Name (переместить между first и last) +-
+15) Send -> Save +
+16) добавить кнопку cancel на попап редактирования профиля +
+17) ШРИФТЫ ВНУТРИ БОЛЬШЕ +
+18) перед удалением ЧЕГО БЫ ТО НИ БЫЛО спращивать +
+19) вместо крестика мусорку для удаления -
+20) http://localhost:8080/Instagram/profile/user= +
+21) список пользователей - must have +
+22) для себя - My Profile, для чужого - View Profile +
+23) когда пользователя забанили на логине ему показывать сообщение: "your account is locked. Please contact administrator"
+24) добавить фавиконку +

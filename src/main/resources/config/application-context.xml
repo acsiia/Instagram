@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd ">
+
+    <context:component-scan base-package="by.alex.bsuir.instagram.dao"/>
+    <context:component-scan base-package="by.alex.bsuir.instagram.service"/>
+    <context:component-scan base-package="by.alex.bsuir.instagram.converter"/>
+    <context:component-scan base-package="by.alex.bsuir.instagram.hash"/>
+    <context:component-scan base-package="by.alex.bsuir.instagram.validator"/>
+    <context:annotation-config/>
+
+    <import resource="hibernate-config.xml"/>
+    <import resource="security-config.xml"/>
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:i18n/messages</value>
+                <value>classpath:i18n/errors</value>
+                <value>classpath:path</value>
+                <value>classpath:loggerout</value>
+                <value>classpath:i18n/countries</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <ref bean="userToUserDTOConverter"/>
+                <ref bean="userDTOToUserConverter"/>
+                <ref bean="postDTOToPostConverter"/>
+                <ref bean="postToPostDTOConverter"/>
+                <ref bean="commentDTOToCommentConverter"/>
+                <ref bean="commentToCommentDTOConverter"/>
+                <ref bean="profileToProfileDTOConverter"/>
+                <ref bean="profileDTOToProfileConverter"/>
+                <ref bean="ratingDTOToRatingConverter"/>
+                <ref bean="ratingToRatingDTOConverter"/>
+                <ref bean="countryToCountryDTOConverter"/>
+            </set>
+        </property>
+    </bean>
+    <bean class="by.alex.bsuir.instagram.entity.Comment" id="comment"/>
+
+</beans>
